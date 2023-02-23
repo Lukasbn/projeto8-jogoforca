@@ -1,0 +1,56 @@
+body{
+    padding-left: 40px;
+    padding-right: 50px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+img{
+    width: 400px;
+    height: 470;
+}
+button{
+    width: 100px;
+    height: 100px;
+}
+.palavra button{
+    width: 200px;
+    height: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background-color: #27AE60;
+    border-radius: 8px;
+    border: none;
+}
+.imagem{
+    background-color: yellow;
+}
+.palavra{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.palavra div{
+    height: 68px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 70px;
+    color: #000000;
+}
+
+.teclado{
+    background-color: purple;
+    height: 100px;
+}
