@@ -8,7 +8,7 @@ import forca5 from "./assets/forca5.png"
 import forca6 from "./assets/forca6.png"
 
 
-export default function Jogo() {
+export default function Jogo({setJogoIniciado}) {
     const [erro, setErro] = useState(0)
     const [imagem, setImagem] = useState(forca0)
     const [palavra, setPalavra] = useState([])
@@ -51,7 +51,6 @@ export default function Jogo() {
         <div className="container">
             <div className="imagem">
                 <img src={imagem} alt="imagem-forca" />
-                <button onClick={errou}></button>
             </div>
             <div className="palavra">
                 <button> Escolher Palavra </button>

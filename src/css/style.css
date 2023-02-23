@@ -1,8 +1,8 @@
 body{
     padding-left: 40px;
     padding-right: 50px;
-    padding-top: 60px;
-    padding-bottom: 100px;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 .container{
@@ -13,10 +13,6 @@ body{
 img{
     width: 400px;
     height: 470;
-}
-button{
-    width: 100px;
-    height: 100px;
 }
 .palavra button{
     width: 200px;
@@ -30,11 +26,7 @@ button{
     border-radius: 8px;
     border: none;
 }
-.imagem{
-    background-color: yellow;
-}
 .palavra{
-    background-color: blue;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -51,6 +43,22 @@ button{
 }
 
 .teclado{
-    background-color: purple;
     height: 100px;
+    width: 700px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.teclado button{
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #7AA7C7;
+    color: #7AA7C7;
+    background-color: #E1ECF4;
+    
 }
