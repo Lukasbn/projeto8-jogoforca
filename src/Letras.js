@@ -3,7 +3,7 @@ const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m
 export default function Letras({jogoIniciado}){
     return(
         <div className="teclado">
-            {alfabeto.map((letra) => <button disabled={!jogoIniciado} >{letra}</button>)}
+            {alfabeto.map((letra) => <button onClick={()=> console.log(`${letra}`)} key={letra} disabled={!jogoIniciado} >{letra}</button>)}
         </div>
     )
 }
