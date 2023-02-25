@@ -29,32 +29,32 @@ export default function Letras({letraDaPalavra,certas, setCertas, setJogoIniciad
     function errou() {
         const novoErro = erro + 1 
         setErro(novoErro)
-        if (novoErro === 0) {
+        if (novoErro === 1) {
             const novoErro = erro + 1
             setErro(novoErro)
             setImagem(forca1)
         }
-        else if (novoErro === 1) {
+        else if (novoErro === 2) {
             const novoErro = erro + 1
             setErro(novoErro)
             setImagem(forca2)
         }
-        else if (novoErro === 2) {
+        else if (novoErro === 3) {
             const novoErro = erro + 1
             setErro(novoErro)
             setImagem(forca3)
         }
-        else if (novoErro === 3) {
+        else if (novoErro === 4) {
             const novoErro = erro + 1
             setErro(novoErro)
             setImagem(forca4)
         }
-        else if (novoErro === 4) {
+        else if (novoErro === 5) {
             const novoErro = erro + 1
             setErro(novoErro)
             setImagem(forca5)
         }
-        else if (novoErro === 5) {
+        else if (novoErro === 6) {
             const novoErro = erro + 1
             setErro(novoErro)
             setImagem(forca6)
