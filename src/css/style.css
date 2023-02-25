@@ -44,6 +44,13 @@ img{
     gap: 10px;
 }
 
+.container div .perdeu{
+    color: red;
+}
+.container div .ganhou{
+    color: green;
+}
+
 .teclado{
     height: 100px;
     width: 700px;

@@ -9,12 +9,23 @@ import forca6 from "./assets/forca6.png"
 const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 
-export default function Letras({setJogoIniciado, jogoIniciado, setTentativa, tentativa, setErro, setImagem, erro, palavra}){
+export default function Letras({letraDaPalavra,certas, setCertas, setJogoIniciado, jogoIniciado, setTentativa, tentativa, setErro, setImagem, erro, palavra, setPerdeu, setGanhou}){
     function clicouLetra(letra){
         console.log(tentativa)
         setTentativa([...tentativa, letra])
         if(!palavra.includes(letra)){
             errou()
+        }else if (palavra.includes(letra)){
+            let novoArray = certas
+            console.log(certas)
+            novoArray.push(letra)
+            setCertas(novoArray)
+            console.log(novoArray,"isso daqui")
+            console.log(certas,"disgrama")
+            if(novoArray.length === letraDaPalavra.length){
+                setGanhou(true)
+                setJogoIniciado(false)
+            }
         }
     }
     
@@ -52,6 +63,11 @@ export default function Letras({setJogoIniciado, jogoIniciado, setTentativa, ten
             setErro(novoErro)
             setImagem(forca6)
             setJogoIniciado(false)
+            setPerdeu(true)
+            console.log(letraDaPalavra)
+            for (let index = 0; index < letraDaPalavra.length; index++) {
+                setTentativa(alfabeto)
+            }
         }
     }
 
