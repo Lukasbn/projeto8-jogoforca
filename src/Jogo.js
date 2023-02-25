@@ -17,7 +17,6 @@ export default function Jogo({setCertas, letraDaPalavra, setGanhou, setPerdeu, s
         const letrasPalavra = []
         for (let index = 0; index < escolhido.length; index++) {
             arrayDaPalavra.push(escolhido[index])
-            console.log(arrayDaPalavra)
             if(!letrasPalavra.includes(escolhido[index])){
                 letrasPalavra.push(escolhido[index])
             }
@@ -25,8 +24,6 @@ export default function Jogo({setCertas, letraDaPalavra, setGanhou, setPerdeu, s
         }
         setLetraDaPalavra(letrasPalavra)
         setPalavra(arrayDaPalavra)
-        console.log(arrayDaPalavra)
-        console.log('finalizou')
     }
     
     const avaliar = [ganhou ? "ganhou" : ""]
@@ -34,11 +31,11 @@ export default function Jogo({setCertas, letraDaPalavra, setGanhou, setPerdeu, s
     return (
         <div className="container">
             <div className="imagem">
-                <img src={imagem} alt="imagem-forca" />
+                <img data-test="game-image" src={imagem} alt="imagem-forca" />
             </div>
             <div className="palavra">
-                <button onClick={iniciarJogo}> Escolher Palavra </button>
-                <div>
+                <button data-test="choose-word" onClick={iniciarJogo}> Escolher Palavra </button>
+                <div data-test="word">
                     {palavra.map((letra,index)=> <div key={index} className={perdeu ? "perdeu" : avaliar} >{tentativa.includes(letra) ? letra : '_' }</div>)}
                 </div>
             </div>
